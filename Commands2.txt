@@ -1,0 +1,9 @@
+idlj StringOperation.idl
+idlj -fall -oldImplBase StringOperation.idl
+javac *.java
+orbd -ORBDInitialPort 8080
+
+java StringOperationServer -ORBInitialPort 8080 -ORBInitialHost
+
+java StringOperationClient -ORBInitialPort 8080 -ORBInitialHost
+
